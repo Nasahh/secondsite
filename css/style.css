@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Montagu+Slab&display=swap');
+
+@font-face {
+    font-family: AstroSpace;
+    src: url(/fonts/AstroSpace.ttf);
+}
+
+body, html{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Montagu Slab", serif;
+    background-color: white;
+    height: 100%;
+}
+
+header{
+    background-color: #3d210b;
+    box-shadow: 5px 5px #814519;
+}
+
+.main-nav{
+    height: 90px;
+}
+
+.logo{
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    line-height: 90px;
+    margin-left: 30px;
+    font-family: "Astrospace", sans-serif;
+    font-weight: bold;
+
+}
+
+.navlinks{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    float: right;
+    line-height: 90px;
+}
+
+.navlinks li{
+    display: inline-block;
+    margin: 0px 20px;
+    
+}
+
+.navlinks li a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 18px;
+    transition: all 0.3s linear 0s;
+}
+
+.navlinks li a:hover{
+    border-bottom:#eab995 solid 3px;
+    color: #0d0702;
+}
+
+li a.help{
+    background-color: #eec6a9;
+    padding: 9px 20px;
+    border-bottom: none;
+    border-radius: 50px;
+    transition: all 0.5s ease 0px;
+}
+
+li a.help:hover{
+    border-bottom: none;
+    color: white;
+    background-color: #e3a272;
+}
+
+#check{
+    display: none;
+}
+
+.menu-btn{
+    font-size: 25px;
+    margin-right: 40px;
+    line-height: 90px;
+    cursor: pointer;
+    float: right;
+    color: white;
+    display: none;
+    
+}
+
+
+@media (max-width: 800px) {
+    .navlinks{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        text-align: center;
+        right: -100%;
+        transition: all 0.5s;
+        background: #743e16;
+    }
+
+    .menu-btn{
+        display: block;
+    }
+
+    #check:checked ~ .navlinks{
+        right: 0px;
+    }
+
+    .navlinks li{
+        display: block;
+    }
+
+    .navlinks li a{
+        font-size: 20px;
+
+    }
+
+    .navlinks li a:hover{
+        border-bottom: none;
+    }
+
+
+    @media (max-width: 350px) {
+        .logo{
+            font-size: 20px;
+            margin-left: 10px;
+        }
+
+        .menu-btn{
+            font-size: 20px;
+            margin-left: 10px;
+        }
+
+        .menu-btn:focus{
+            color: white;
+        }
+    }
+}
+
+.first-image, .second-image, .third-image{
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 0.7;
+}
+
+.first-image{
+    background-image: url("../img/image 1.jpg");
+    min-height: 100%;
+}
+
+.second-image{
+    background-image: url("../img/image 2.jpg");
+    min-height: 500px;
+}
+
+.third-image{
+    background-image: url("../img/image 3.jpg");
+    min-height: 400px;
+}
+.text{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    font-size: 27px;
+    color: #0d0702;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    
+}
+
+.text .nasa{
+    background-color: #111;
+    padding: 15px;
+    color: white;
+}
+
+.section{
+    text-align: center;
+    padding: 50px 80px;
+}
+
+.section-light{
+    background-color: #f0fff0;
+    color: #0d0702;
+}
+
+.text .nasa.transparent{
+    background-color: transparent;
+}
+
+.section-dark{
+    background-color: #4d4d4d;
+    color: #ddd;
+}
+
